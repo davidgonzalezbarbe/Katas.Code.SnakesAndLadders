@@ -8,6 +8,27 @@ From a technical point of view, the implementation of this game needs to be plat
 we stick on it. For this reason, we are not interested in the frontend you choose to use to test the game, only that the core game logic is separate and tested. of the feature
 
 
+US 1 - Token Can Move Across the Board
+=========================================
+As a player
+I want to be able to move my token
+So that I can get closer to the goal
+
+
+US 2 - Player Can Win the Game
+=========================================
+As a player
+I want to be able to win the game
+So that I can gloat to everyone around
+
+
+US 3 - Moves Are Determined By Dice Rolls
+=========================================
+As a player
+I want to move my token based on the roll of a die
+So that there is an element of chance in the game
+
+
 @US-1 @UAT1
 Scenario: game is started
 	Given the game is started
