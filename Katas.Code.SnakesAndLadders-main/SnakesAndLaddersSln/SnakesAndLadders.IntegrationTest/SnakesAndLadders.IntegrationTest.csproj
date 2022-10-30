@@ -28,4 +28,8 @@
     <ProjectReference Include="..\SnakesAndLadders.Core\SnakesAndLadders.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+
 </Project>

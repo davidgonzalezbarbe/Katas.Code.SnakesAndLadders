@@ -1,6 +1,6 @@
 ﻿namespace SnakesAndLadders.Core
 {
-    public class Class1
+    public class Player
     {
 
     }
