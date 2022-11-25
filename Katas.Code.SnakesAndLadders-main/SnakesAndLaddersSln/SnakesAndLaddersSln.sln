@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.Core", "SnakesAndLadders.Core\SnakesAndLadders.Core.csproj", "{D123C452-AF1D-4121-AAAA-BC5F1CDA8AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders.Core", "SnakesAndLadders.Core\SnakesAndLadders.Core.csproj", "{D123C452-AF1D-4121-AAAA-BC5F1CDA8AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.IntegrationTest", "SnakesAndLadders.IntegrationTest\SnakesAndLadders.IntegrationTest.csproj", "{11768F57-081F-46E5-81BF-93E9CCD0AFE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders.IntegrationTest", "SnakesAndLadders.IntegrationTest\SnakesAndLadders.IntegrationTest.csproj", "{11768F57-081F-46E5-81BF-93E9CCD0AFE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.Console", "SnakesAndLadders.Console\SnakesAndLadders.Console.csproj", "{C72CE5D8-F714-4007-8ED3-20C2AB2CF892}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D123C452-AF1D-4121-AAAA-BC5F1CDA8AA4} = {D123C452-AF1D-4121-AAAA-BC5F1CDA8AA4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{11768F57-081F-46E5-81BF-93E9CCD0AFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11768F57-081F-46E5-81BF-93E9CCD0AFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11768F57-081F-46E5-81BF-93E9CCD0AFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72CE5D8-F714-4007-8ED3-20C2AB2CF892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72CE5D8-F714-4007-8ED3-20C2AB2CF892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72CE5D8-F714-4007-8ED3-20C2AB2CF892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72CE5D8-F714-4007-8ED3-20C2AB2CF892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
