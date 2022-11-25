@@ -34,3 +34,48 @@ Scenario: game is started
 	Given the game is started
 	When the token is placed on the board
 	Then the token is on square 1
+
+@US-1 @UAT2
+Scenario: move one times
+	Given Given the token is on square 1
+	When When the token is moved 3 spaces
+	Then Then the token is on square 4
+
+@US-1 @UAT3
+Scenario: move two times
+	Given the token is on square 1
+	When the token is moved 3 spaces
+	And then it is moved 4 spaces
+	Then the token is on square 8
+
+	
+
+
+@US-2 @UAT1
+Scenario: the token is moved and the player as won the game
+	Given the token is on square 97
+	When the token is moved 3 spaces
+	Then the token is on square 100
+	And the player has won the game
+
+@US-2 @UAT2
+Scenario: the token is moved and the player as not won the game
+	Given the token is on square 97
+	When the token is moved 4 spaces
+	Then the token is on square 97
+	And the player has not won the game
+
+
+
+
+@US-3 @UAT1
+Scenario: the player rolls a die
+	Given the game is started
+	When the player rolls a die
+	Then the result should be between 1-6 inclusive
+
+@US-3 @UAT2
+Scenario: the player rolls a 4 and the token should move 4 spaces
+	Given the player rolls a 4
+	When they move their token
+	Then the token should move 4 spaces
