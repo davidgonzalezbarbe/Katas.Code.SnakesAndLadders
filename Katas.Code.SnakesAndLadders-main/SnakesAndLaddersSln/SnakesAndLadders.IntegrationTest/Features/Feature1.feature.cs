@@ -40,9 +40,26 @@ namespace SnakesAndLadders.IntegrationTest.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature1", @"A short summarySnakes and Ladders is a board game involving two or more players rolling dice in order to move their tokens across a board. The board is made up of a collection of numbered squares and is adorned with 'snakes' and 'ladders', which link two squares on the board- snakes link the squares downwards whilst ladders link them going upwards. This means that landing at the bottom of a ladder moves you to the top of that ladder, whereas landing on the top of a snake moves you to the bottom of that snake. The objective of the game is to get your token to the final square before your opponents do.
-
-From a technical point of view, the implementation of this game needs to be platform agnostic. We are going to want to launch this game on multiple devices and need a solid, robust game library which we can use as the backend for every frontend we stick on it. For this reason, we are not interested in the frontend you choose to use to test the game, only that the core game logic is separate and tested. of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature1", "A short summarySnakes and Ladders is a board game involving two or more players r" +
+                    "olling dice in order to move their tokens across a board. The board is made up o" +
+                    "f a collection of numbered squares and is adorned with \'snakes\' and \'ladders\', \r" +
+                    "\nwhich link two squares on the board- snakes link the squares downwards whilst l" +
+                    "adders link them going upwards. This means that landing at the bottom of a ladde" +
+                    "r moves you to the top of that ladder, whereas landing on the top of a snake mov" +
+                    "es \r\nyou to the bottom of that snake. The objective of the game is to get your t" +
+                    "oken to the final square before your opponents do.\r\n\r\nFrom a technical point of " +
+                    "view, the implementation of this game needs to be platform agnostic. We are goin" +
+                    "g to want to launch this game on multiple devices and need a solid, robust game " +
+                    "library which we can use as the backend for every frontend \r\nwe stick on it. For" +
+                    " this reason, we are not interested in the frontend you choose to use to test th" +
+                    "e game, only that the core game logic is separate and tested. of the feature\r\n\r\n" +
+                    "\r\nUS 1 - Token Can Move Across the Board\r\n======================================" +
+                    "===\r\nAs a player\r\nI want to be able to move my token\r\nSo that I can get closer t" +
+                    "o the goal\r\n\r\n\r\nUS 2 - Player Can Win the Game\r\n================================" +
+                    "=========\r\nAs a player\r\nI want to be able to win the game\r\nSo that I can gloat t" +
+                    "o everyone around\r\n\r\n\r\nUS 3 - Moves Are Determined By Dice Rolls\r\n==============" +
+                    "===========================\r\nAs a player\r\nI want to move my token based on the r" +
+                    "oll of a die\r\nSo that there is an element of chance in the game", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -85,16 +102,14 @@ From a technical point of view, the implementation of this game needs to be plat
         [Xunit.SkippableFactAttribute(DisplayName="game is started")]
         [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
         [Xunit.TraitAttribute("Description", "game is started")]
-        [Xunit.TraitAttribute("Category", "US-1")]
-        [Xunit.TraitAttribute("Category", "UAT1")]
+        [Xunit.TraitAttribute("Category", "US1_UAT1")]
         public void GameIsStarted()
         {
             string[] tagsOfScenario = new string[] {
-                    "US-1",
-                    "UAT1"};
+                    "US1_UAT1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("game is started", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -104,14 +119,221 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
+#line 33
  testRunner.Given("the game is started", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 10
+#line 34
  testRunner.When("the token is placed on the board", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 35
  testRunner.Then("the token is on square 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="move one times")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "move one times")]
+        [Xunit.TraitAttribute("Category", "US1_UAT2")]
+        public void MoveOneTimes()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US1_UAT2"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("move one times", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 38
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 39
+ testRunner.Given("the token is on square 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 40
+ testRunner.When("the token is moved 3 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 41
+ testRunner.Then("the token is on square 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="move two times")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "move two times")]
+        [Xunit.TraitAttribute("Category", "US1_UAT3")]
+        public void MoveTwoTimes()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US1_UAT3"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("move two times", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 44
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 45
+ testRunner.Given("the token is on square 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 46
+ testRunner.When("the token is moved 3 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 47
+ testRunner.And("then it is moved 4 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 48
+ testRunner.Then("the token is on square 8", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="the token is moved and the player as won the game")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "the token is moved and the player as won the game")]
+        [Xunit.TraitAttribute("Category", "US2_UAT1")]
+        public void TheTokenIsMovedAndThePlayerAsWonTheGame()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US2_UAT1"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("the token is moved and the player as won the game", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 54
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 55
+ testRunner.Given("the token is on square 97", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 56
+ testRunner.When("the token is moved 3 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 57
+ testRunner.Then("the token is on square 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 58
+ testRunner.And("the player has won the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="the token is moved and the player as not won the game")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "the token is moved and the player as not won the game")]
+        [Xunit.TraitAttribute("Category", "US2_UAT2")]
+        public void TheTokenIsMovedAndThePlayerAsNotWonTheGame()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US2_UAT2"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("the token is moved and the player as not won the game", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 61
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 62
+ testRunner.Given("the token is on square 97", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 63
+ testRunner.When("the token is moved 4 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 64
+ testRunner.Then("the token is on square 97", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 65
+ testRunner.And("the player has not won the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="the player rolls a die")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "the player rolls a die")]
+        [Xunit.TraitAttribute("Category", "US3_UAT1")]
+        public void ThePlayerRollsADie()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US3_UAT1"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("the player rolls a die", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 71
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 72
+ testRunner.Given("the game is started", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 73
+ testRunner.When("the player rolls a die", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 74
+ testRunner.Then("the result should be between 1 and 6 inclusive", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="the player rolls a 4 and the token should move 4 spaces")]
+        [Xunit.TraitAttribute("FeatureTitle", "Feature1")]
+        [Xunit.TraitAttribute("Description", "the player rolls a 4 and the token should move 4 spaces")]
+        [Xunit.TraitAttribute("Category", "US3_UAT2")]
+        public void ThePlayerRollsA4AndTheTokenShouldMove4Spaces()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "US3_UAT2"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("the player rolls a 4 and the token should move 4 spaces", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 77
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 78
+ testRunner.Given("the player rolls a 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 79
+ testRunner.When("they move their token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 80
+ testRunner.Then("the token should move 4 spaces", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
